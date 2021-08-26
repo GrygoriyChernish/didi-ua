@@ -1,0 +1,54 @@
+.features-wrapper {
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
+.features {
+  margin-bottom: 20px;
+}
+
+.features-item {
+  @include mq(tablet) {
+    font-size: 18px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.featires-button {
+  display: inline-block;
+
+  width: 190px;
+  padding: 10px 35px;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 23px;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    border 250ms var(--cubic);
+
+  border: 2px solid transparent;
+
+  background: var(--accent-color);
+  color: var(--white-color);
+
+  &:hover,
+  &:focus {
+    background: var(--white-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.features-img {
+  @include mq(tablet) {
+    margin: 0 auto;
+  }
+}

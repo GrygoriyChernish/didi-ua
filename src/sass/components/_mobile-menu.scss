@@ -1,0 +1,100 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 100px 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  background-color: var(--secondary-color);
+
+  &.is-open {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  }
+  @include mq(tablet) {
+    padding: 143px 0;
+  }
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: 'close menu';
+
+    top: 20px;
+    right: 20px;
+
+    @include mq(tablet) {
+      right: 60px;
+    }
+  }
+  &-close-svg {
+    fill: var(--white-color);
+    @include mq(tablet) {
+      width: 51px;
+      height: 51px;
+    }
+  }
+  &-logo {
+    display: block;
+    position: absolute;
+    content: 'site logo';
+
+    top: 30px;
+    left: 20px;
+  }
+
+  .nav {
+    margin-bottom: 25px;
+  }
+
+  .nav-list,
+  .auth-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item:not(:last-child) {
+    margin-bottom: 15px;
+    @include mq(desktop) {
+      margin-bottom: 40px;
+    }
+  }
+  .nav-link,
+  .auth-nav-link {
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: inherit;
+    color: #b5afaf;
+
+    transition: color 250ms var(--cubic);
+
+    @include mq(tablet) {
+      font-size: 48px;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.mobile-menu-btn {
+  display: flex;
+}
+.mobile-menu-svg {
+  fill: var(--accent-color);
+}

@@ -1,0 +1,109 @@
+.partnership-wrapper {
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
+.partnership {
+  margin-bottom: 30px;
+
+  @include mq(tablet) {
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.partnership-item {
+  position: relative;
+
+  padding-left: 45px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+
+    display: inline-block;
+
+    width: 33px;
+    height: 33px;
+    background-image: url(../images/partnership/persent.png);
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(../images/partnership/shield.png);
+  }
+
+  &:last-child::before {
+    background-image: url(../images/partnership/phones.png);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.partnership-title {
+  margin-bottom: 10px;
+
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--accent-color);
+  font-weight: 400;
+
+  @include mq(tablet) {
+    font-size: 24px;
+  }
+}
+
+.partnership-text {
+  @include mq(tablet) {
+    font-size: 18px;
+  }
+}
+
+.partnership-button {
+  display: inline-block;
+
+  width: 190px;
+  padding: 10px 35px;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  border-radius: 23px;
+  border: 2px solid transparent;
+
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    border 250ms var(--cubic);
+
+  background: var(--accent-color);
+  color: var(--white-color);
+
+  &:hover,
+  &:focus {
+    background: var(--white-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  @include mq(tablet) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include mq(desktop) {
+    display: inline-block;
+  }
+}
+
+.partnership-img {
+  margin-top: 30px;
+
+  @include mq(desktop) {
+    margin-top: 0;
+  }
+}

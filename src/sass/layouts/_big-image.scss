@@ -1,0 +1,5 @@
+.section-img {
+  @include mq(tablet) {
+    padding-top: 100px;
+  }
+}

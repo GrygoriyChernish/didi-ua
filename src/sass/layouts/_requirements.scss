@@ -1,0 +1,75 @@
+.requirements {
+  @include mq(tablet) {
+    width: 465px;
+    margin: 0 auto;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.requirements-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+
+  &:first-child {
+    margin-bottom: 30px;
+
+    background-image: url(../images/requirements/driver-jpg.jpeg);
+
+    @include mq(desktop) {
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+  }
+
+  &:last-child {
+    background-image: url(../images/requirements/auto-jpg.jpeg);
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 13px;
+    color: #0f1419;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  @include mq(mobile) {
+    height: 220px;
+  }
+
+  @include mq(desktop) {
+    width: 465px;
+  }
+}
+
+.requirements-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.requirements-driver {
+}
+
+.requirements-driver-item:not(:last-child),
+.requirements-auto-item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.requirements-auto {
+}
