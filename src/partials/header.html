@@ -1,8 +1,40 @@
 <header class="header">
   <div class="container header__container">
-    <a href="./" aria-label="Логотип компании DiDi">
-      <img class="logo" src="./images/logo_didi.svg" alt="DiDi логотип" width="90" height="30" />
-    </a>
+    <div class="header-wrapper">
+      <a
+        href="./"
+        aria-label="Логотип компании DiDi"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
+        <img class="logo" src="./images/logo_didi.svg" alt="DiDi логотип" width="90" height="30" />
+      </a>
+      <ul class="auth-nav">
+        <li class="auth-nav-item">
+          <a class="auth-nav-link" href="tel:+7(778)5265887">+7 (778) 526-58-87</a>
+        </li>
+        <li class="auth-nav-item">
+          <a class="auth-nav-link" href="tel:+7 (747) 387-47-35">+7 (747) 387-47-35</a>
+        </li>
+        <li class="auth-nav-item">
+          <a class="auth-nav-link" href="mailto:didiglobal.kz@gmail.com"
+            >didiglobal.kz@gmail.com
+          </a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        data-menu-btn
+        aria-label="открывает мобильное меню"
+      >
+        <svg class="mobile-menu-svg" width="30" height="20">
+          <use href="./images/sprite.svg#icon-mobile-menu"></use>
+        </svg>
+      </button>
+      <a href="#form" class="header-button" aria-label="ссылка на форму"> Подключиться </a>
+    </div>
+
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item">
@@ -24,18 +56,6 @@
         </li>
       </ul>
     </nav>
-
-    <a href="#form" class="header-button btn-modal" aria-label="ссылка на форму"> Подключиться </a>
-    <button
-      type="button"
-      class="mobile-menu-btn"
-      data-menu-btn
-      aria-label="открывает мобильное меню"
-    >
-      <svg class="mobile-menu-svg" width="30" height="20">
-        <use href="./images/sprite.svg#icon-mobile-menu"></use>
-      </svg>
-    </button>
   </div>
 </header>
 <div class="mobile-menu" data-menu>

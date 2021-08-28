@@ -4,12 +4,18 @@
 
   background-color: var(--primery-color);
   background-image: url(../images/hero/hero-background.png), url(../images/hero/hero.webp);
+  background-size: contain, cover;
   background-repeat: no-repeat;
-  // background-size: cover;
   background-position: 50% 85%;
 
   @include mq(mobile) {
     background-position: 50% 70%;
+  }
+
+  @include mq(tablet) {
+    margin-top: 72px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 

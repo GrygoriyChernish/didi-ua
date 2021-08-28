@@ -12,12 +12,16 @@
   pointer-events: none;
 
   background-color: var(--secondary-color);
+  @include mq(tablet) {
+    display: none;
+  }
 
   &.is-open {
     visibility: visible;
     pointer-events: all;
     opacity: 1;
     transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+    z-index: 1000;
   }
   @include mq(tablet) {
     padding: 143px 0;
@@ -94,6 +98,10 @@
 
 .mobile-menu-btn {
   display: flex;
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 .mobile-menu-svg {
   fill: var(--accent-color);

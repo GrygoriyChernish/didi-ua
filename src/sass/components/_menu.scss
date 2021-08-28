@@ -1,35 +1,73 @@
 .header__container {
   .nav {
     display: none;
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: block;
-    }
-    @include mq(desktop) {
-      margin-left: auto;
     }
   }
   .nav-list {
     @include mq(tablet) {
       display: flex;
+      justify-content: space-between;
     }
   }
   .nav-item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 50px;
     @include mq(desktop) {
-      margin-right: 50px;
+      margin-right: 100px;
     }
   }
   .nav-link {
     font-size: 16px;
     line-height: 1.5;
     font-family: inherit;
-    color: var(--secondary-txt-cl);
+    color: var(--white-color);
 
-    transition: color var(--fast) linear;
+    transition: color 250ms var(--cubic);
 
     &:hover,
     &:focus {
-      color: var(--accent-cl);
+      color: var(--accent-color);
+    }
+    @include mq(desktop) {
+      font-weight: 500;
+    }
+  }
+
+  .auth-nav {
+    display: none;
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mq(desktop) {
+      flex-direction: row;
+    }
+  }
+  @include mq(notDesktop) {
+    .auth-nav-item:last-child {
+      margin-top: 5px;
+    }
+  }
+  .auth-nav-item:not(:last-child) {
+    @include mq(desktop) {
+      margin-right: 50px;
+    }
+  }
+
+  .auth-nav-link {
+    @include mq(tablet) {
+      display: block;
+      transition: color 250ms var(--cubic);
+      font-size: 14px;
+      color: var(--white-color);
+      line-height: 1.21;
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
     }
   }
 }
