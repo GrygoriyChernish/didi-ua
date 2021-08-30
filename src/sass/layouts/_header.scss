@@ -1,3 +1,16 @@
+.arrow-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  @include mq(desktop) {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+// -------------------------------------
+
 .header {
   // position: fixed;
   // top: 0;
@@ -82,16 +95,5 @@
   }
   @include mq(tablet) {
     padding: 10px 35px;
-  }
-}
-
-.arrow-up {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  @include mq(desktop) {
-    bottom: 40px;
-    right: 40px;
   }
 }

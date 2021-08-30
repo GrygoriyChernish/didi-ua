@@ -45,6 +45,9 @@
     line-height: 1.4;
     margin-bottom: 6px;
   }
+  .year {
+    width: 230px;
+  }
 
   @include mq(mobile) {
     height: 220px;
