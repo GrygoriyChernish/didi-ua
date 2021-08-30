@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 57px;
+  // margin-top: 57px;
   padding: 50px 0 30px;
 
   background-color: var(--primery-color);
@@ -13,7 +13,7 @@
   }
 
   @include mq(tablet) {
-    margin-top: 72px;
+    // margin-top: 72px;
     padding-top: 100px;
     padding-bottom: 100px;
   }

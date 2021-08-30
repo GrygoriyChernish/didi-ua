@@ -1,27 +1,33 @@
 <section class="section form-section" id="form">
-  <div class="container form-container">
+  <div class="container">
     <h2 class="visually-hidden">Зарегистрируйся уже сегодня</h2>
-    <div>
+    <div class="form-wrapper">
       <img class="form-logo" src="./images/logo_didi.svg" alt="Логотип компании DiDi" />
       <h4>Начните зарабатывать вместе с нами!</h4>
-      <h3>Зарегистрируйся сегодня!</h3>
     </div>
 
     <form class="form">
-      <span>
+      <h3>Зарегистрируйся сегодня!</h3>
+      <span class="form-field">
         <input class="form-input" type="text" id="name" />
         <label class="form-label" for="name">Имя</label>
       </span>
 
-      <span
+      <span class="form-field"
         ><input class="form-input" type="tel" id="tel" />
         <label class="form-label" for="tel">Телефон</label></span
       >
 
-      <span
+      <span class="form-field"
         ><input class="form-input" type="email" id="email" />
         <label class="form-label" for="email">Емейл</label></span
       >
+
+      <label class="checkbox-label">
+        <input class="checkbox-input visually-hidden" type="checkbox" name="checkbox" />
+        <span class="checkbox"></span>
+        <span class="checkbox-text">Я согласен на обработку персональных данных</span>
+      </label>
 
       <button class="form-button">Подключится</button>
     </form>

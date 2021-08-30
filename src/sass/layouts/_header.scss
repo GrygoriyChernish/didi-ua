@@ -1,8 +1,8 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 999;
 
   display: flex;
 
@@ -82,5 +82,16 @@
   }
   @include mq(tablet) {
     padding: 10px 35px;
+  }
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  @include mq(desktop) {
+    bottom: 40px;
+    right: 40px;
   }
 }
