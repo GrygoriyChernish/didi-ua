@@ -10,7 +10,7 @@
   }
 
   .container {
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -18,7 +18,7 @@
   }
 
   .form-wrapper {
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,9 +35,13 @@
     line-height: 1.2;
     text-align: center;
 
+    @include mq(tablet) {
+      width: 260px;
+      margin-bottom: 0;
+    }
+
     @include mq(desktop) {
       width: 340px;
-      margin-bottom: 0;
     }
   }
 
@@ -47,8 +51,9 @@
     font-weight: 700;
     color: var(--white-color);
 
-    @include mq(desktop) {
+    @include mq(tablet) {
       font-size: 33px;
+      line-height: 1;
     }
   }
 }
@@ -56,6 +61,10 @@
 .form-logo {
   width: 130px;
   margin: 0 auto 15px;
+
+  @include mq(tablet) {
+    width: 210px;
+  }
 
   @include mq(desktop) {
     width: 360px;
@@ -156,6 +165,9 @@ input:focus {
 
   border: 2px solid #dfdfdf;
   border-radius: 4px;
+
+  transition: border-color 250ms var(--cubic), background-color 250ms var(--cubic),
+    background-image 250ms var(--cubic);
 
   .checkbox-input:checked + & {
     background-image: url(../images/form/icon-check.svg);
