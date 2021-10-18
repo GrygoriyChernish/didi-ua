@@ -1,0 +1,32 @@
+.lang-controls {
+  position: absolute;
+
+  top: 5px;
+  right: 20px;
+
+  @include mq(desktop) {
+    top: 10px;
+    right: 90px;
+    display: flex;
+  }
+
+  @include mq(desktop) {
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  button {
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: border-color 250ms var(--cubic), color 250ms var(--cubic);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+    }
+  }
+}

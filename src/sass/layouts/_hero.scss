@@ -1,54 +1,51 @@
 .hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   // margin-top: 57px;
   padding: 50px 0 30px;
 
   background-color: var(--primery-color);
-  background-image: url(../images/hero/hero-background.png), url(../images/hero/hero.webp);
   background-size: contain, cover;
   background-repeat: no-repeat;
   background-position: 50% 85%;
+
+  background-image: url('../images/hero/hero-background.png'),
+    url('../images/hero/hero-mobile.jpeg');
+
+  @include mq(retina) {
+    background-image: url('../images/hero/hero-background.png'),
+      url('../images/hero/hero-mobile@2x.jpeg');
+  }
+
+  @media screen and (min-width: 500px) {
+    background-image: url('../images/hero/hero-background.png'),
+      url('../images/hero/hero-tablet.jpeg');
+
+    @include mq(retina) {
+      background-image: url('../images/hero/hero-background.png'),
+        url('../images/hero/hero-tablet@2x.jpeg');
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    background-image: url('../images/hero/hero-background.png'),
+      url('../images/hero/hero-desktop.jpeg');
+
+    @include mq(retina) {
+      background-image: url('../images/hero/hero-background.png'),
+        url('../images/hero/hero-desktop@2x.jpeg');
+    }
+  }
 
   @include mq(mobile) {
     background-position: 50% 70%;
   }
 
   @include mq(tablet) {
-    // margin-top: 72px;
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-}
-
-.lang-controls {
-  position: absolute;
-
-  top: 5px;
-  right: 20px;
-
-  @include mq(desktop) {
-    top: 10px;
-    right: 90px;
-    display: flex;
-  }
-
-  @include mq(desktop) {
-    li:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-
-  button {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: border-color 250ms var(--cubic);
-    &:hover,
-    &:focus {
-      border: 1px solid var(--accent-color);
-    }
   }
 }
 
