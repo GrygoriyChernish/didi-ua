@@ -100,7 +100,8 @@
 
   transition: transform 250ms var(--cubic), color 250ms var(--cubic);
 
-  .form-input:focus + & {
+  .form-input:focus + &,
+  .form-input:not(:placeholder-shown) + & {
     transform: translateY(-200%);
     color: var(--accent-color);
   }
@@ -118,6 +119,10 @@
   background: #eef3f7;
   padding: 0 10px 0 16px;
   color: #50627d;
+}
+
+.form-input._error {
+  box-shadow: 0 0 15px red;
 }
 
 .form-button {
@@ -151,6 +156,7 @@ input:focus {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .checkbox {
@@ -166,14 +172,18 @@ input:focus {
   border: 2px solid #dfdfdf;
   border-radius: 4px;
 
-  transition: border-color 250ms var(--cubic), background-color 250ms var(--cubic),
-    background-image 250ms var(--cubic);
+  transition: border-color 250ms var(--cubic),
+    background-color 250ms var(--cubic), background-image 250ms var(--cubic);
 
   .checkbox-input:checked + & {
     background-image: url(../images/form/icon-check.svg);
     background-color: var(--accent-color);
     border-color: var(--accent-color);
   }
+}
+
+.checkbox-input._error + .checkbox {
+  box-shadow: 0 0 15px red;
 }
 
 .checkbox-text {
