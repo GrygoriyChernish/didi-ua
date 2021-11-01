@@ -5,6 +5,6 @@ var e,t=arguments[3];!function(t,n){"object"==typeof exports&&"undefined"!=typeo
 },{}],"cOFZ":[function(require,module,exports) {
 
 },{}],"E0Ji":[function(require,module,exports) {
-"use strict";var e=r(require("aos"));function r(e){return e&&e.__esModule?e:{default:e}}require("aos/dist/aos.css"),e.default.init({duration:1e3,once:!1});
+"use strict";var e=r(require("aos"));function r(e){return e&&e.__esModule?e:{default:e}}require("aos/dist/aos.css"),e.default.init({duration:1e3,once:!0});
 },{"aos":"RKkx","aos/dist/aos.css":"cOFZ"}]},{},["E0Ji"], null)
-//# sourceMappingURL=/animate.dd59949e.js.map
+//# sourceMappingURL=/animate.1ec1fd45.js.map
