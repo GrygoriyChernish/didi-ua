@@ -1,7 +1,7 @@
 <section class="section form-section" id="form">
   <div class="container">
     <h2 class="visually-hidden">Зарегистрируйся уже сегодня</h2>
-    <div class="form-wrapper">
+    <div class="form-wrapper" data-aos="flip-right">
       <img
         class="form-logo"
         src="./images/logo_didi.svg"
@@ -11,8 +11,10 @@
     </div>
 
     <form class="form">
-      <h3 class="lang" key="formh3">Зареєструйся сьогодні!</h3>
-      <span class="form-field">
+      <h3 class="lang" key="formh3" data-aos="fade-down">
+        Зареєструйся сьогодні!
+      </h3>
+      <span class="form-field" data-aos="fade-left">
         <input
           class="form-input _req"
           type="text"
@@ -23,7 +25,7 @@
         <label class="form-label lang" key="labelname" for="name">Ім`я</label>
       </span>
 
-      <span class="form-field"
+      <span class="form-field" data-aos="fade-left" data-aos-delay="50"
         ><input
           class="form-input _req"
           type="tel"
@@ -34,7 +36,7 @@
         <label class="form-label" for="tel">Телефон</label></span
       >
 
-      <span class="form-field"
+      <span class="form-field" data-aos="fade-left" data-aos-delay="100"
         ><input
           class="form-input _req _email"
           type="email"
@@ -45,7 +47,7 @@
         <label class="form-label" for="email">Емейл</label></span
       >
 
-      <label class="checkbox-label">
+      <label class="checkbox-label" data-aos="fade-left" data-aos-delay="150">
         <input
           class="checkbox-input visually-hidden _req"
           type="checkbox"
@@ -57,7 +59,9 @@
         >
       </label>
 
-      <button class="form-button lang" key="formbutton">Підключитися</button>
+      <button class="form-button lang" key="formbutton" data-aos="fade-up">
+        Підключитися
+      </button>
     </form>
   </div>
 </section>

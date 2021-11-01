@@ -9,6 +9,7 @@
 .getstarted-container {
   @include mq(tablet) {
     width: 470px;
+    // padding: 0 300px;
     margin: 0 auto;
   }
 }
